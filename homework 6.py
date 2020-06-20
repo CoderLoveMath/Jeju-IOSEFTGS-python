@@ -1,17 +1,39 @@
-import math
+from math import *
+from matplotlib import pyplot as plt
+import time
+
+print("""
+   _____                                 _____ _                 _       _   _             
+  / ____|                               / ____(_)               | |     | | (_)            
+ | |     __ _ _ __  _ __   ___  _ __   | (___  _ _ __ ___  _   _| | __ _| |_ _  ___  _ __  
+ | |    / _` | '_ \| '_ \ / _ \| '_ \   \___ \| | '_ ` _ \| | | | |/ _` | __| |/ _ \| '_ \ 
+ | |___| (_| | | | | | | | (_) | | | |  ____) | | | | | | | |_| | | (_| | |_| | (_) | | | |
+  \_____\__,_|_| |_|_| |_|\___/|_| |_| |_____/|_|_| |_| |_|\__,_|_|\__,_|\__|_|\___/|_| |_|
+                                start in 3 seconds
+""")
+time.sleep(3)
+
+# hyper parameter
 g = 9.8
-pos_y = lambda v0, theta_v, t_v: v0 * math.sin(theta_v) * t_v - g * t_v * t_v * 1 / 2
-pos_x = lambda v0, theta_v, t_v: v0 * math.cos(theta_v) * t_v
 
-first_velocity = float(input('input base velocity: '))
-theta = float(input('input launching degree: '))
-t = 0
+# parameter
+v0 = float(input('launching velocity(ms/s): '))
+deg = float(input('launching degree(˚): ')) / 45
+x_range = int(input('checking distance: '))
 
-while True:
-    t += 0.1
-    y = pos_y(first_velocity, theta, t)
-    print('t={time}: y={height}'.format(time=t, height=y))
-    if y <= 0.0:
-        break
+# var
+x = range(0, x_range)
+y = []
 
-print('time', t, 'the CANNON BALL was broke.')
+# calc func
+def calcY(x_):
+    first_term = x_ * tan(deg)
+    operation = lambda t1, t2: t1 - t2
+    second_term = g * x_ * x_ / ( 2 * v0 * v0 * cos(deg) * cos(deg))
+    return operation(first_term, second_term)
+
+for i in x:
+    y.append(calcY(i))
+
+plt.plot(x, y)
+plt.show()
