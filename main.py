@@ -1,4 +1,4 @@
-s = int(input('input second time: '))
+s = int(input('input second time: '))   # input
 h = s // 360
 s = s % 360
 m = s // 60
