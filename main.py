@@ -1,7 +1,11 @@
-s = int(input('input second time: '))   # input
-h = s // 360    # hoour
-s = s % 360
-m = s // 60 # minute
-s = s % 60  # second
+def whatisbig(n1, n2):
+    if n1>n2:
+        return n1
+    elif n1<n2:
+        return n2
+    else:
+        return None
 
-print(h, 'hour', m, 'min', s, 'sec')    # output
+a = int(input('integer: '))
+b = int(input('integer: '))
+print('Big:', whatisbig(a,b))
