@@ -1,6 +1,5 @@
 import math
 
-
 a = int(input('integer: '))
 b = int(input('integer: '))
 
