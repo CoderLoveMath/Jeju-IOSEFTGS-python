@@ -1,5 +1,7 @@
-cm = int(input('input cm: ')) # stdin: cm
-print('converting...')
-m = cm // 100   # m = 100cm
-cm = cm % 100   # cm = (input) mod 100
-print('convert finished. The result is ', m, 'm ', cm, 'cm', sep='') # stdout: (m)m (cm)cm
+s = int(input('input second time: '))
+h = s // 360
+s = s % 360
+m = s // 60
+s = s % 60
+
+print(h, 'hour', m, 'min', s, 'sec')
