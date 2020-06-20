@@ -4,4 +4,4 @@ s = s % 360
 m = s // 60 # minute
 s = s % 60  # second
 
-print(h, 'hour', m, 'min', s, 'sec')    # output
+print(h, 'hour', m, 'min', s, 'sec')    # output (h)hour (m)minute (s)second
