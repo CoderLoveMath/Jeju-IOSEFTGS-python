@@ -14,6 +14,6 @@ base = int(input('minute time: '))
 print('converting...')
 time.sleep(2)
 h = base // 60
-m = (base - (60 * h))
+m = base % 60
 
 print('convert finished: ', h, 'hour', m, 'minute')
