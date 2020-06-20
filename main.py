@@ -1,17 +1,7 @@
-def whatisbig(n1, n2, n3):
-    if n1>n2:
-        if n1>n3:
-            return n1
-        elif n1<n3:
-            return n3
-    elif n1<n2:
-        if n2 > n3:
-            return n2
-        elif n2 < n3:
-            return n3
-    return None
+mode = input('C or F (temp standard): ')
+temp = int(input('temp: '))
 
-a = int(input('integer: '))
-b = int(input('integer: '))
-c = int(input('integer: '))
-print('Big:', whatisbig(a,b,c))
+if mode == 'C':
+    print(temp * 9 / 5 + 32)
+else:
+    print((temp - 32) * 5 / 9)
