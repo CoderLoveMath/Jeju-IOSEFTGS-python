@@ -43,7 +43,7 @@ def gui():
         base = int(input_e.get())
         h = base // 60
         m = base % 60
-        result_str = str(h) + 'hour ' + str(m) + 'min'
+        result_str = str(h) + ' hour ' + str(m) + ' min'
         result.config(text=result_str)
 
     btn = Button(window)
