@@ -1,6 +1,7 @@
 import math
 g = 9.8
-pos_y = lambda v0, theta, t: v0 * math.sin(theta) * t - g * t * t * 1 / 2
+pos_y = lambda v0, theta_v, t_v: v0 * math.sin(theta_v) * t_v - g * t_v * t_v * 1 / 2
+pos_x = lambda v0, theta_v, t_v: v0 * math.cos(theta_v) * t_v
 
 first_velocity = float(input('input base velocity: '))
 theta = float(input('input launching degree: '))
