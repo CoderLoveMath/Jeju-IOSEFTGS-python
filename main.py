@@ -1,4 +1,4 @@
-for i in range(2, 10):
-    for j in range(2, 10):
-        print(i, '*', j, '=', i * j, end=' ')
+for i in range(1, 6):
+    for j in range(1, i+1):
+        print(j, end=' ')
     print()
