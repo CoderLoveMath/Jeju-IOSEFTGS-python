@@ -1,9 +1,13 @@
-num = int(input('Amount of numbers? '))
-maxnum = 0
+import random
+num = random.randint(1, 20)
 
-for i in range(num):
-    n = int(input('number: '))
-    if n > maxnum:
-        maxnum = n
+while True:
+    select = int(input('Guess my number!'))
 
-print("The greatest number is", maxnum)
+    if select is num:
+        print("Right. You're genius!")
+        break
+    elif num < select:
+        print('it is less then your number,', select)
+    else:
+        print('it is greatest then your number,', select)
