@@ -1,4 +1,2 @@
-for i in range(1, 6):
-    for j in range(1, i+1):
-        print(j, end=' ')
-    print()
+menu = ['짜장면', '짬뽕', '볶음밥', '우동']
+print(menu)
