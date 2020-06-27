@@ -1,5 +1,9 @@
-fact = 1
-for i in range(2, 6):
-    fact *= i
+num = int(input('Amount of numbers? '))
+maxnum = 0
 
-print(fact)
+for i in range(num):
+    n = int(input('number: '))
+    if n > maxnum:
+        maxnum = n
+
+print("The greatest number is", maxnum)
