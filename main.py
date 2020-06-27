@@ -1,7 +1,8 @@
+ran = int(input("Range: "))
 s = 0
 i = 1
 
-while i <= 5:
+while i <= ran:
     s += i
     i += 1
 
