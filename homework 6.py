@@ -38,7 +38,7 @@ y = []
 def calcY(x_):
     first_term = x_ * tan(deg)
     operation = lambda t1, t2: t1 - t2
-    second_term = g * x_ * x_ / ( 2 * v0 * v0 * cos(deg) * cos(deg))
+    second_term = g * x_ * x_ / (2 * v0 * v0 * cos(deg) * cos(deg))
     return operation(first_term, second_term)
 
 for i in x:
