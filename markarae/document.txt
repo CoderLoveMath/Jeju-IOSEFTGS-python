@@ -1,0 +1,11 @@
+- Grammar
+    #<type> [text]
+
+    - type:
+        - title
+        - subtitle
+        - headline
+        - text
+        - footline
+
+    - Important! You should make in this grammar! If you break this rule, you're code may doesn't work!
