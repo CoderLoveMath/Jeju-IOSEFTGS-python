@@ -1,6 +1,12 @@
-menu = ['짜장면', '짬뽕', '볶음밥', '우동']
+import numpy as np
 
-for i in range(len(menu)//2):
-    menu[i], menu[3 - i] = menu[3 - i], menu[i]
+rlist = np.random.randint(1, 101, size=10)
+print(rlist, type(rlist))
 
-print(menu)
+max = rlist[0]
+
+for i in range(1, len(rlist)):
+    if rlist[i] > max:
+        max = rlist[i]
+
+print('Maximum number:', max)
