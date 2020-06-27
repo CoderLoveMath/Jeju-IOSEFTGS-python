@@ -1,9 +1,5 @@
-ran = int(input("Range: "))
 s = 0
-i = 0
-
-while i < ran:
-    i += 1
+for i in range(2, 101, 2):
     s += i
 
 print(s)
