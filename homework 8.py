@@ -13,3 +13,5 @@ while True:
         print('it is less then your number,', select)
     else:
         print('it is greatest then your number,', select)
+
+print('try count: ', try_count)
