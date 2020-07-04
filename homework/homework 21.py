@@ -75,7 +75,24 @@ while not done:
         font = pygame.font.Font('font.ttf', 30)
         text = font.render("계산 결과, 20.4가 넓이가 됨을 알 수 있습니다.", True, (28, 0, 0))
         screen.blit(text, (40, 500))
-
+    elif scene_count < 23:
+        font = pygame.font.Font('font.ttf', 30)
+        text = font.render("일반화 시켜보면,", True, (28, 0, 0))
+        screen.blit(text, (200, 500))
+    elif scene_count < 26:
+        font = pygame.font.Font('font.ttf', 30)
+        text = font.render("변의 길이인 a, b, c로 이루어진 삼각형의 넓이는", True, (28, 0, 0))
+        screen.blit(text, (40, 500))
+    else:
+        font = pygame.font.Font('font.ttf', 30)
+        prev_text = font.render("변의 길이인 a, b, c로 이루어진 삼각형의 넓이는", True, (28, 0, 0))
+        screen.blit(prev_text, (40, 450))
+        font = pygame.font.Font('font.ttf', 40)
+        text = font.render("s(s-a)(s-b)(s-c)의 제곱근입니다", True, (28, 0, 0))
+        font = pygame.font.Font('font.ttf', 30)
+        subtext = font.render("(단, s = (a+b+c) / 2)", True, (28, 0, 0))
+        screen.blit(text, (40, 500))
+        screen.blit(subtext, (200, 550))
 
     pygame.display.flip()
 
