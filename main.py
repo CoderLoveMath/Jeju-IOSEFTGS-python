@@ -1,3 +1,6 @@
 ch = input('input letter: ')
 key = int(input('distance: '))
-print(chr(ord(ch)+key))
+asci = ord(ch) + key
+if asci > 122:
+    asci = asci - 122 + 96
+print(chr(asci))
