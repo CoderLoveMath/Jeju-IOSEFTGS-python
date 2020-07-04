@@ -1,10 +1,10 @@
-str1 = input('string: ')
-str2 = ""
+strlist = []
+n = int(input('Total Count: '))
+for i in range(n):
+    strlist.append(input('String: '))
 
-for i in range(len(str1) - 1, -1, -1):
-    str2 = str2 + str1[i]
-
-if str1 == str2:
-    print('Palindrome')
-else:
-    print('not Palindrome')
+for i in range(n):
+    if len(strlist[i]) <= 3 or strlist[i].find('zzz') != -1:
+        print(strlist[i], ': X')
+    else:
+        print(strlist[i], ': O')
