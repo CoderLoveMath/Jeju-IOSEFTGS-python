@@ -23,6 +23,7 @@ pygame.display.set_caption("Solar System Simulator")
 # Loop until the user clicks the close button.
 done = False
 clock = pygame.time.Clock()
+tick = 0
 
 color_p = input("Choose planet's color(choose in MER,VEN,EAR,MAR)")
 if color_p == "MER":

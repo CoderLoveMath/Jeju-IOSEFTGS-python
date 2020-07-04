@@ -59,6 +59,7 @@ def run(code_t):
     window.mainloop()
     return
 
+
 if __name__ == '__main__':
     with open('file.mkarae') as f:
         run(f.read())
