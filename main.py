@@ -1,6 +1,11 @@
-n1 = int(input('first number: '))
-n2 = int(input('second number: '))
+s = int(input('first number(small): '))
+b = int(input('second number(big): '))
 
-for i in range(1, n1+1):
-    if n1 % i == 0 and n2 % i == 0:
-        print(i, end=' ')
+while True:
+    r = b % s
+    if r == 0:
+        print(s)
+        break
+    else:
+        b = s
+        s = r
