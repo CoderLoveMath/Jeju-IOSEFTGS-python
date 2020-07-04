@@ -1,5 +1,3 @@
-import math
-x = 15129
-x = math.sqrt(x)
-x = str(int(x)) + 'kg'
-print(x)
+ch = input('input letter: ')
+key = int(input('distance: '))
+print(chr(ord(ch)+key))
