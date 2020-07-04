@@ -1,8 +1,6 @@
-for n in range(1, 20 + 1):
-    print(n, end=': ')
-    count = 0
-    for i in range(1, n + 1):
-        if n % i == 0:
-            count += 1
-            print(i, end=' ')
-    print('({})'.format(count))
+n1 = int(input('first number: '))
+n2 = int(input('second number: '))
+
+for i in range(1, n1+1):
+    if n1 % i == 0 and n2 % i == 0:
+        print(i, end=' ')
