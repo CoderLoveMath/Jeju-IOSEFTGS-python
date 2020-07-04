@@ -1,10 +1,6 @@
-strlist = []
-n = int(input('Total Count: '))
-for i in range(n):
-    strlist.append(input('String: '))
+text = ' 제주대,서울대,KAIST '
+text = text.strip()
+text = text.replace('대', '대학교')
+text = text.split(',')
 
-for i in range(n):
-    if len(strlist[i]) <= 3 or strlist[i].find('zzz') != -1:
-        print(strlist[i], ': X')
-    else:
-        print(strlist[i], ': O')
+print(text)
