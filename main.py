@@ -1,3 +1,5 @@
-x = '123kg'
-x = int(x.rstrip('kg'))
-print(x**2)
+import math
+x = 15129
+x = math.sqrt(x)
+x = str(int(x)) + 'kg'
+print(x)
