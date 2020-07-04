@@ -1,10 +1,15 @@
-for n in range(2, 50 + 1):
-    isPrime = True
+# ver 1: use list
+a = []
 
-    for i in range(2, n):
-        if n % i == 0:
-            isPrime = False
-            break
+# init
+for i in range(101):
+    a.append(0)
 
-    if isPrime:
-        print(n, end=' ')
+for i in range(2, 101):
+    if a[i] == 0:
+        for j in range(2 * i, 101, i):
+            a[j] = 1
+
+for i in range(2, 101):
+    if a[i] == 0:
+        print(i, end=' ')
