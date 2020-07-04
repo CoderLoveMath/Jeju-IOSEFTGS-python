@@ -1,11 +1,12 @@
-s = int(input('first number(small): '))
-b = int(input('second number(big): '))
+n = int(input('please input the number: '))
+isPrime = True
 
-while True:
-    r = b % s
-    if r == 0:
-        print(s)
+for i in range(2, n):
+    if n % i == 0:
+        isPrime = False
         break
-    else:
-        b = s
-        s = r
+
+if isPrime:
+    print('this is prime')
+else:
+    print('this is composite number')
