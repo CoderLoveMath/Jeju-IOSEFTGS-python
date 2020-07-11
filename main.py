@@ -1,7 +1,7 @@
-def s(a):
-    if a == 1:
-        return 1
-    else:
-        return a + s(a-1)
+def gcd(a, b):  # a > b
+    if b == 0 or a == 0:
+        return a
+    return gcd(b, a % b)
 
-print(s(100))
+print(gcd(15, 12))
+print(gcd(72, 27))
