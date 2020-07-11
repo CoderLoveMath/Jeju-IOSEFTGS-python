@@ -1,5 +1,12 @@
-food = []
-for i in range(2):
-    temp = [input('Name: '), input('Price: ')]
-    food.append(temp)
-print(food)
+import numpy as np
+
+ds = np.random.randint(1, 101, size=100)
+print(ds)
+key = 1
+found = False
+
+for a in range(len(ds)):
+    if key == ds[a]:
+        found = True
+        print("ds[{a}] is {va}".format(a=a, va=ds[a]))
+        break
