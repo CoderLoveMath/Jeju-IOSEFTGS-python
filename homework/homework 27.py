@@ -33,7 +33,7 @@ with open('db.dat', "w") as f:
         4. clear all
         5. print as Grade Order
         6. print as Name Order
-        7. exit
+        7. save and quit
         """))
 
         if n == 1:
