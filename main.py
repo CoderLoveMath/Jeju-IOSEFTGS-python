@@ -1,9 +1,7 @@
-def diff(a, b):
-    if a > b:
-        return a - b
-    else:
-        return b - a
+def print_n(str, n):
+    if n == 0:
+        return
+    print(str)
+    print_n(str, n-1)
 
-n1 = int(input('First number: '))
-n2 = int(input('Second number: '))
-print('diff: {}'.format(diff(n1, n2)))
+print_n('Hello!', 3)
