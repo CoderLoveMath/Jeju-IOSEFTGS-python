@@ -1,12 +1,15 @@
+capital = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+small = capital.lower()
+
 plain = input('Plain Text: ')
 key = 3
 cipher = ''
 
 for ch in plain:
-    if 'a' <= ch <= 'z':
-        cipher += chr(ord('a') + (ord(ch) - ord('a') + key) % 26)
-    elif 'A' <= ch <= 'Z':
-        cipher += chr(ord('A') + (ord(ch) - ord('A') + key) % 26)
+    if ch in small:
+        cipher += small[(small.index(ch) + 3) % 26]
+    elif ch in capital:
+        cipher += capital[(capital.index(ch) + 3) % 26]
     else:
         cipher += ch
 
