@@ -41,11 +41,14 @@ with open('db.dat', "w") as f:
             userlist.append([userinfo[0], int(userinfo[1])])
             print('thanks! your data was saved!')
         elif n == 2:
-            userinfo = input("Enter student's name to delete: ")
-            for i in range(len(userlist)):
-                if userlist[i][0] == userinfo:
-                    del userlist[i]
-            print('thanks! successfully deleted!')
+            try:
+                userinfo = input("Enter student's name to delete: ")
+                for i in range(len(userlist)):
+                    if userlist[i][0] == userinfo:
+                        del userlist[i]
+                print('thanks! successfully deleted!')
+            except:
+                print('Sorry, something went wrong :(')
         elif n == 3:
             userinfo = input("Enter student's name to edit: ")
             for i in range(len(userlist)):
