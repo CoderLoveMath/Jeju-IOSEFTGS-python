@@ -1,16 +1,10 @@
-capital = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-small = capital.lower()
+import numpy as np
+ds = np.random.randint(1, 101, size=5)
+print(ds)
 
-plain = input('Plain Text: ')
-key = 3
-cipher = ''
+for a in range(0, len(ds) - 1):
+    for b in range(0, len(ds) - a - 1):
+        if ds[b + 1] < ds[b]:
+            ds[b], ds[b+1] = ds[b+1], ds[b]
 
-for ch in plain:
-    if ch in small:
-        cipher += small[(small.index(ch) + 3) % 26]
-    elif ch in capital:
-        cipher += capital[(capital.index(ch) + 3) % 26]
-    else:
-        cipher += ch
-
-print('Cipher Text:', cipher)
+print(ds)
