@@ -48,7 +48,8 @@ with open('db.dat', "w") as f:
                         del userlist[i]
                 print('thanks! successfully deleted!')
             except:
-                print('Sorry, something went wrong :(')
+                print("""Sorry, something went wrong :(
+                Solution: enter 5 to see your data. And enter 7 to save""")
         elif n == 3:
             userinfo = input("Enter student's name to edit: ")
             for i in range(len(userlist)):
