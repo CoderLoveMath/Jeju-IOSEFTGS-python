@@ -1,7 +1,7 @@
-def print_n(str, n):
-    if n == 0:
-        return
-    print(str)
-    print_n(str, n-1)
+def s(a):
+    if a == 1:
+        return 1
+    else:
+        return a + s(a-1)
 
-print_n('Hello!', 3)
+print(s(100))
