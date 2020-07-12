@@ -157,7 +157,7 @@ while True:
             for i in range(y):
                 for j in range(x):
                     if table[i][j] == find:
-                        print('FIND: location: {x}*{y}'.format(x=x, y=y))
+                        print('FIND: location: {x}*{y}'.format(x=i + 1, y=j + 1))
         elif mod == '4':
             break
         else:
